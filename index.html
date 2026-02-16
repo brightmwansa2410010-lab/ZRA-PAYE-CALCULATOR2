@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paye Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <header class="top-header">
+    <div class="header-inner">
+        <div class="logo-area">
+            <img src="photo/logo.png" alt="ZRA Logo" class="zra-logo">
+        </div>
+        <nav class="top-nav">
+            <a href="#">About Us</a>
+            <a href="#">Tax Payer Charter</a>
+            <a href="#">Tenders</a>
+            <a href="#">Careers</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN NAVIGATION BAR -->
+<nav class="main-nav">
+    <div class="nav-inner">
+        <a href="#">HOME</a>
+        <a href="#">REGISTRATIONS</a>
+        <a href="#">BUSINESS</a>
+        <a href="#">CUSTOMS</a>
+        <a href="#">PUBLICATIONS</a>
+        <a href="#">STATISTICS</a>
+        <a href="#">TAX PORTAL</a>
+        <a href="#">TAX TOOLS</a>
+        <a href="#">SMART INVOICE</a>
+        <a href="#">TAXPAYER RELATIONS</a>
+    </nav>
+<div class="main-card">
+
+    <h1>Paye Calculator</h1>
+
+    <!-- INPUTS -->
+    <label>Basic Pay</label>
+    <input type="number" id="basicPay" placeholder="Enter Salary">
+
+    <label>Allowances</label>
+    <input type="number" id="allowances" placeholder="Enter allowances">
+
+    <label>Other Deductions</label>
+    <input type="number" id="otherDeductions" placeholder="Enter other deductions">
+
+    <!-- OUTPUTS -->
+    <div class="row">
+        <span>Gross/Taxable Pay</span>
+        <span id="grossPay">K 0</span>
+    </div>
+
+    <div class="row">
+        <span>Napsa 5%</span>
+        <span id="napsa">K 0</span>
+    </div>
+
+    <div class="row">
+        <span>National Health Insurance 1%</span>
+        <span id="nhima">K 0</span>
+    </div>
+
+    <hr>
+
+    <div class="row bold">
+        <span>Total Contributions</span>
+        <span id="totalContributions">K 0</span>
+    </div>
+
+    <div class="row bold">
+        <span>PAYE</span>
+        <span id="paye">K 0</span>
+    </div>
+
+    <div class="row bold">
+        <span>Total Deductions</span>
+        <span id="totalDeductions">K 0</span>
+    </div>
+
+    <div class="net-box">
+        <span>Net Salary</span>
+        <span id="netSalary">K 0</span>
+    </div>
+
+    <div class="btn-container">
+        <button class="calculate-btn" onclick="calculate()">Calculate</button>
+        <button class="clear-btn" onclick="clearForm()">Clear</button>
+    </div>
+
+    <!-- TAX TABLE -->
+    <h3 class="table-title">PAYE TAX COMPUTATION BANDS 2026</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Tax Bands</th>
+                <th>Chargeable Income</th>
+                <th>Tax Rate</th>
+                <th>Tax Due</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First K5,100.00</td>
+                <td>0</td>
+                <td>0%</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Next K5,100.01 - K7,100.00</td>
+                <td>0</td>
+                <td>20%</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Next K7,100.01 - K9,200.00</td>
+                <td>0</td>
+                <td>30%</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>K9,200.01 and above</td>
+                <td>0</td>
+                <td>37%</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="note">
+        Note: Gross pay shows the tax band category used to calculate your tax
+    </p>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
