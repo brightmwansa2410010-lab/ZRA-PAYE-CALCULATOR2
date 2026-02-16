@@ -1,5 +1,5 @@
 function calculate() {
-    // Get input values
+
     let basic = Number(document.getElementById("basicPay").value) || 0;
     let allowances = Number(document.getElementById("allowances").value) || 0;
     let other = Number(document.getElementById("otherDeductions")?.value) || 0; // optional if missing
@@ -10,13 +10,14 @@ function calculate() {
 
     // NAPSA 5%
     let napsa = gross * 0.05;
+
     // NHIMA 1%
     let nhima = gross * 0.01;
 
     document.getElementById("napsa").textContent = "K " + napsa.toFixed(2);
     document.getElementById("nhima").textContent = "K " + nhima.toFixed(2);
 
-    // Total contributions
+    
     let totalContributions = napsa + nhima;
     document.getElementById("totalContributions").textContent = "K " + totalContributions.toFixed(2);
 
@@ -37,24 +38,24 @@ function calculate() {
 
     document.getElementById("paye").textContent = "K " + paye.toFixed(2);
 
-    // Total deductions
     let totalDeductions = totalContributions + paye + other;
     document.getElementById("totalDeductions").textContent = "K " + totalDeductions.toFixed(2);
 
-    // Net salary
+    
     let net = gross - totalDeductions;
     document.getElementById("netSalary").textContent = "K " + net.toFixed(2);
 }
 
+//clear button function
 function clearForm() {
-    // Clear inputs
+    
     document.getElementById("basicPay").value = "";
     document.getElementById("allowances").value = "";
     if (document.getElementById("otherDeductions")) {
         document.getElementById("otherDeductions").value = "";
     }
 
-    // Reset outputs
+  
     document.getElementById("grossPay").textContent = "K 0";
     document.getElementById("napsa").textContent = "K 0";
     document.getElementById("nhima").textContent = "K 0";
